@@ -20,7 +20,7 @@ for _ in range(total_cases):
             if sleep_record[i] < sleep_record[-1]:
                 not_largest_index = i
 
-        if sleep_record[0] == sleep_record[-1]:
+        if sleep_record[0] != sleep_record[-1]:
             sleep_record.append(sleep_record.pop(not_largest_index) + sleep_record.pop(0))
             modifications_number += 1
         else:
